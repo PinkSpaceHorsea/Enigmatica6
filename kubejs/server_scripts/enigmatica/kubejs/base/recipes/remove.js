@@ -13,6 +13,7 @@ events.listen('recipes', (event) => {
     event.remove({ type: 'minecraft:blasting', input: '#farmersdelight:tools/knives' });
 
     event.remove({ mod: 'prettypipes' });
+    event.remove({ mod: 'ironjetpacks' });
 
     var outputRemovals = [
         'bambooeverything:bamboo_bundle',
@@ -61,6 +62,10 @@ events.listen('recipes', (event) => {
         'astralsorcery:infuser/gold_ore',
 
         'autumnity:turkey_piece',
+        'autumnity:syrup_bottle',
+        'autumnity:syrup_bottle_from_smoking',
+        'autumnity:syrup_bottle_from_campfire_cooking',
+        'autumnity:sugar_from_sap_bottle',
 
         'bloodmagic:smelting/ingot_netherite_scrap',
 
@@ -87,18 +92,45 @@ events.listen('recipes', (event) => {
         'fluxnetworks:fluxcontroller',
         'fluxnetworks:fluxcore',
 
+        'industrialforegoing:laser_drill_ore/niter',
+        'industrialforegoing:laser_drill_ore/sapphire',
+        'industrialforegoing:laser_drill_ore/ruby',
+        'industrialforegoing:laser_drill_ore/ancient_debris',
+        'industrialforegoing:laser_drill_ore/arcane',
+        'industrialforegoing:laser_drill_ore/mana',
+        'industrialforegoing:laser_drill_ore/bitumen',
+        'industrialforegoing:laser_drill_ore/fluorite',
+        'industrialforegoing:laser_drill_ore/osmium',
+        'industrialforegoing:laser_drill_ore/iron',
+        'industrialforegoing:laser_drill_ore/gold',
+        'industrialforegoing:laser_drill_ore/glowstone',
+        'industrialforegoing:laser_drill_ore/emerald',
+        'industrialforegoing:laser_drill_ore/uranium',
+        'industrialforegoing:laser_drill_ore/tin',
+        'industrialforegoing:laser_drill_ore/sulfur',
+        'industrialforegoing:laser_drill_ore/silver',
+        'industrialforegoing:laser_drill_ore/redstone',
+        'industrialforegoing:laser_drill_ore/quartz',
+        'industrialforegoing:laser_drill_ore/nickel',
+        'industrialforegoing:laser_drill_ore/zinc',
+        'industrialforegoing:laser_drill_ore/lead',
+        'industrialforegoing:laser_drill_ore/lapis',
+        'industrialforegoing:laser_drill_ore/cinnabar',
+        'industrialforegoing:laser_drill_ore/diamond',
+        'industrialforegoing:laser_drill_ore/copper',
+        'industrialforegoing:laser_drill_ore/aluminum',
+        'industrialforegoing:laser_drill_ore/coal',
+        'industrialforegoing:stonework_generate/andesite',
+        'industrialforegoing:stonework_generate/diorite',
+        'industrialforegoing:stonework_generate/granite',
+
         'immersiveengineering:crafting/stick_steel',
         'immersiveengineering:crafting/stick_aluminum',
         'immersiveengineering:crafting/stick_iron',
         'immersiveengineering:crusher/bone_meal',
-
         'immersiveengineering:crafting/jerrycan',
 
         'immersivepetroleum:distillationtower/oilcracking',
-
-        'industrialforegoing:stonework_generate/andesite',
-        'industrialforegoing:stonework_generate/diorite',
-        'industrialforegoing:stonework_generate/granite',
 
         'mapperbase:steel_nugget_from_blasting',
         'mapperbase:steel_plate_from_blasting',
@@ -133,6 +165,11 @@ events.listen('recipes', (event) => {
         'thermal:machine/integrateddynamics/sawmill_integrateddynamics_menril_log_filled',
         'thermal:machine/plugins/integrateddynamics/sawmill_integrateddynamics_menril_log_filled',
         'thermal:storage/sugar_cane_from_block',
+        'thermal:devices/plugins/byg/tree_extractor_byg_rainbow_eucalyptus',
+        'thermal:devices/plugins/byg/tree_extractor_byg_mahogany',
+        'thermal:devices/plugins/byg/tree_extractor_byg_baobab',
+        'thermal:devices/tree_extractor/tree_extractor_jungle',
+
         'powah:crafting/energy_cell_basic_2',
         'powah:crafting/cable_basic',
 

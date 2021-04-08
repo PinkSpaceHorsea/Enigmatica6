@@ -176,3 +176,7 @@ config/immersiveengineering-client.toml
 .DS_Store?
 config/immersivepetroleum-client.toml
 config/cyclopscore-client.toml
+config/ironjetpacks-client.toml
+config/cucumber-client.toml
+config/travel_anchors-client.toml
+config/tconstruct-client.toml

@@ -39,7 +39,7 @@ events.listen('recipes', (event) => {
         }
 
         event.recipes.thermal
-            .press(gear, [Ingredient.of(input, 4), 'thermal:press_gear_die'])
+            .press(output, [Ingredient.of(input, 4), mold])
             .id(`thermal:machine/press/press_${material}_ingot_to_gear`);
 
         event.recipes.immersiveengineering
@@ -47,7 +47,7 @@ events.listen('recipes', (event) => {
             .id(`kubejs:immersiveengineering_metal_press_${material}_gear`);
 
         event
-            .shaped(gear, [' B ', 'BAB', ' B '], {
+            .shaped(output, [' B ', 'BAB', ' B '], {
                 A: '#forge:nuggets/iron',
                 B: input
             })
@@ -129,7 +129,6 @@ events.listen('recipes', (event) => {
         }
 
         event.remove({ output: wire });
-        event.remove({ id: /immersiveengineering:crafting\/wire/ });
 
         const wireCutters = 'immersiveengineering:wirecutter';
         let output = wire,
