@@ -75,6 +75,8 @@ events.listen('recipes', (event) => {
 
         'buildersaddition:iron_rod',
 
+        'byg:vermilion_sculk',
+
         'compactmachines:wall',
 
         'create:mechanical_crafting/integrated_circuit',
@@ -153,6 +155,7 @@ events.listen('recipes', (event) => {
 
         'quark:building/crafting/tallow_from_block',
 
+        'thermal:machine/smelter/smelter_alloy_netherite',
         'thermal:machine/press/packing2x2/press_honeycomb_packing',
         'thermal:machine/refinery/refinery_crude_oil',
         'thermal:machine/centrifuge/centrifuge_honeycomb',

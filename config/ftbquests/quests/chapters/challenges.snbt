@@ -3,21 +3,604 @@
 	group: "",
 	order_index: 4,
 	filename: "challenges",
-	title: "Challenges WIP",
-	icon: "minecraft:wither_skeleton_skull",
+	title: "Challenges",
+	icon: "minecraft:dragon_head",
 	always_invisible: true,
 	default_quest_shape: "",
-	images: [{
-		x: -7.5d,
-		y: 4.0d,
-		width: 1.0d,
-		height: 1.0d,
-		rotation: 0.0d,
-		image: "minecraft:textures/gui/presets/isles.png",
-		hover: [],
-		click: "",
-		dev: false,
-		corner: false
-	}],
-	quests: []
+	quests: [
+		{
+			title: "Limitless Power",
+			icon: "mininggadgets:upgrade_battery_3",
+			x: 0.0d,
+			y: 2.5d,
+			subtitle: "Infinite Cosmic Power!",
+			description: [
+				"The Ultimate Induction Cell can store up to 1.600.000.000.000 FE, also known as 1.6TFE",
+				"",
+				"To charge an Induction Cell, place it inside an Induction Cell multiblock and charge it."
+			],
+			dependencies: ["1C6E46EA96373E74"],
+			id: "4473CCD6EB0E60E0",
+			tasks: [{
+				id: "43D8479933BD78E5",
+				type: "item",
+				title: "Full Ultimate Induction Cell",
+				icon: {
+					id: "mekanism:ultimate_induction_cell",
+					Count: 1b,
+					tag: {
+						mekData: {
+							EnergyContainers: [{
+								Container: 0b,
+								stored: "4000000000000"
+							}]
+						}
+					}
+				},
+				item: {
+					id: "itemfilters:and",
+					Count: 1b,
+					tag: {
+						items: [
+							{
+								id: "itemfilters:strong_nbt",
+								Count: 1b,
+								tag: {
+									value: {
+										mekData: {
+											EnergyContainers: [{
+												Container: 0b,
+												stored: "4000000000000"
+											}]
+										}
+									}
+								}
+							},
+							{
+								id: "mekanism:ultimate_induction_cell",
+								Count: 1b,
+								tag: {
+									mekData: {
+										EnergyContainers: [{
+											Container: 0b,
+											stored: "4000000000000"
+										}]
+									}
+								}
+							}
+						]
+					}
+				}
+			}]
+		},
+		{
+			title: "Challenger",
+			icon: "minecraft:dragon_head",
+			x: 0.0d,
+			y: 0.0d,
+			shape: "hexagon",
+			description: ["Slaying the Ender Dragon has given you access to the Challenges chapter!"],
+			size: 1.5d,
+			id: "1C6E46EA96373E74",
+			tasks: [{
+				id: "6C159C9408B0C66C",
+				type: "advancement",
+				title: "Kill the Ender Dragon",
+				icon: "minecraft:dragon_head",
+				advancement: "minecraft:end/kill_dragon",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Limitless Lava",
+			x: -3.0d,
+			y: 0.0d,
+			dependencies: ["1C6E46EA96373E74"],
+			id: "64A6812D6EFF4308",
+			tasks: [{
+				id: "5484233E300B3E29",
+				type: "item",
+				title: "Supreme Black Hole Tank with Lava",
+				icon: {
+					id: "industrialforegoing:supreme_black_hole_tank",
+					Count: 1b,
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Type: "WHITELIST",
+								Pointer: 0,
+								Filter: {}
+							},
+							tank: {
+								FluidName: "minecraft:lava",
+								FacingModes: {
+									LEFT: "ENABLED",
+									TOP: "ENABLED",
+									RIGHT: "ENABLED",
+									BACK: "ENABLED",
+									FRONT: "ENABLED",
+									BOTTOM: "ENABLED"
+								},
+								Amount: 2147483647
+							}
+						}
+					}
+				},
+				item: {
+					id: "itemfilters:and",
+					Count: 1b,
+					tag: {
+						items: [
+							{
+								id: "itemfilters:strong_nbt",
+								Count: 1b,
+								tag: {
+									value: {
+										BlockEntityTag: {
+											filter: {
+												Type: "WHITELIST",
+												Pointer: 0,
+												Filter: {}
+											},
+											tank: {
+												FluidName: "minecraft:lava",
+												FacingModes: {
+													LEFT: "ENABLED",
+													TOP: "ENABLED",
+													RIGHT: "ENABLED",
+													BACK: "ENABLED",
+													FRONT: "ENABLED",
+													BOTTOM: "ENABLED"
+												},
+												Amount: 2147483647
+											}
+										}
+									}
+								}
+							},
+							{
+								id: "industrialforegoing:supreme_black_hole_tank",
+								Count: 1b,
+								tag: {
+									BlockEntityTag: {
+										filter: {
+											Type: "WHITELIST",
+											Pointer: 0,
+											Filter: {}
+										},
+										tank: {
+											FluidName: "minecraft:lava",
+											FacingModes: {
+												LEFT: "ENABLED",
+												TOP: "ENABLED",
+												RIGHT: "ENABLED",
+												BACK: "ENABLED",
+												FRONT: "ENABLED",
+												BOTTOM: "ENABLED"
+											},
+											Amount: 2147483647
+										}
+									}
+								}
+							}
+						]
+					}
+				}
+			}]
+		},
+		{
+			title: "Limitless Water",
+			icon: {
+				id: "industrialforegoing:supreme_black_hole_tank",
+				Count: 1b,
+				tag: {
+					BlockEntityTag: {
+						filter: {
+							Type: "WHITELIST",
+							Pointer: 0,
+							Filter: {}
+						},
+						tank: {
+							FluidName: "minecraft:water",
+							FacingModes: {
+								LEFT: "ENABLED",
+								TOP: "ENABLED",
+								RIGHT: "ENABLED",
+								BACK: "ENABLED",
+								FRONT: "ENABLED",
+								BOTTOM: "ENABLED"
+							},
+							Amount: 2147483647
+						}
+					}
+				}
+			},
+			x: -3.0d,
+			y: 1.0d,
+			dependencies: ["1C6E46EA96373E74"],
+			id: "6D463AE8FE933401",
+			tasks: [{
+				id: "68B113885B76682E",
+				type: "item",
+				title: "Supreme Black Hole with Water",
+				icon: {
+					id: "industrialforegoing:supreme_black_hole_tank",
+					Count: 1b,
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Type: "WHITELIST",
+								Pointer: 0,
+								Filter: {}
+							},
+							tank: {
+								FluidName: "minecraft:water",
+								FacingModes: {
+									LEFT: "ENABLED",
+									TOP: "ENABLED",
+									RIGHT: "ENABLED",
+									BACK: "ENABLED",
+									FRONT: "ENABLED",
+									BOTTOM: "ENABLED"
+								},
+								Amount: 2147483647
+							}
+						}
+					}
+				},
+				item: {
+					id: "itemfilters:and",
+					Count: 1b,
+					tag: {
+						items: [
+							{
+								id: "itemfilters:strong_nbt",
+								Count: 1b,
+								tag: {
+									value: {
+										BlockEntityTag: {
+											filter: {
+												Type: "WHITELIST",
+												Pointer: 0,
+												Filter: {}
+											},
+											tank: {
+												FluidName: "minecraft:water",
+												FacingModes: {
+													LEFT: "ENABLED",
+													TOP: "ENABLED",
+													RIGHT: "ENABLED",
+													BACK: "ENABLED",
+													FRONT: "ENABLED",
+													BOTTOM: "ENABLED"
+												},
+												Amount: 2147483647
+											}
+										}
+									}
+								}
+							},
+							{
+								id: "industrialforegoing:supreme_black_hole_tank",
+								Count: 1b,
+								tag: {
+									BlockEntityTag: {
+										filter: {
+											Type: "WHITELIST",
+											Pointer: 0,
+											Filter: {}
+										},
+										tank: {
+											FluidName: "minecraft:water",
+											FacingModes: {
+												LEFT: "ENABLED",
+												TOP: "ENABLED",
+												RIGHT: "ENABLED",
+												BACK: "ENABLED",
+												FRONT: "ENABLED",
+												BOTTOM: "ENABLED"
+											},
+											Amount: 2147483647
+										}
+									}
+								}
+							}
+						]
+					}
+				}
+			}]
+		},
+		{
+			title: "Limitless Oil",
+			icon: {
+				id: "industrialforegoing:supreme_black_hole_tank",
+				Count: 1b,
+				tag: {
+					BlockEntityTag: {
+						filter: {
+							Type: "WHITELIST",
+							Pointer: 0,
+							Filter: {}
+						},
+						tank: {
+							FluidName: "thermal:crude_oil",
+							FacingModes: {
+								LEFT: "ENABLED",
+								TOP: "ENABLED",
+								RIGHT: "ENABLED",
+								BACK: "ENABLED",
+								FRONT: "ENABLED",
+								BOTTOM: "ENABLED"
+							},
+							Amount: 2147483647
+						}
+					}
+				}
+			},
+			x: -3.0d,
+			y: -1.0d,
+			dependencies: ["1C6E46EA96373E74"],
+			id: "378F01CE074D79A0",
+			tasks: [{
+				id: "53630EB2AB461FE0",
+				type: "item",
+				title: "Supreme Black Hole Tank with Oil",
+				icon: {
+					id: "industrialforegoing:supreme_black_hole_tank",
+					Count: 1b,
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Type: "WHITELIST",
+								Pointer: 0,
+								Filter: {}
+							},
+							tank: {
+								FluidName: "immersivepetroleum:oil",
+								FacingModes: {
+									LEFT: "ENABLED",
+									TOP: "ENABLED",
+									RIGHT: "ENABLED",
+									BACK: "ENABLED",
+									FRONT: "ENABLED",
+									BOTTOM: "ENABLED"
+								},
+								Amount: 2147483647
+							}
+						}
+					}
+				},
+				item: {
+					id: "itemfilters:or",
+					Count: 1b,
+					tag: {
+						items: [
+							{
+								id: "itemfilters:and",
+								Count: 1b,
+								tag: {
+									items: [
+										{
+											id: "industrialforegoing:supreme_black_hole_tank",
+											Count: 1b,
+											tag: {
+												BlockEntityTag: {
+													filter: {
+														Type: "WHITELIST",
+														Pointer: 0,
+														Filter: {}
+													},
+													tank: {
+														FluidName: "thermal:crude_oil",
+														FacingModes: {
+															LEFT: "ENABLED",
+															TOP: "ENABLED",
+															RIGHT: "ENABLED",
+															BACK: "ENABLED",
+															FRONT: "ENABLED",
+															BOTTOM: "ENABLED"
+														},
+														Amount: 2147483647
+													}
+												}
+											}
+										},
+										{
+											id: "itemfilters:strong_nbt",
+											Count: 1b,
+											tag: {
+												value: {
+													BlockEntityTag: {
+														filter: {
+															Type: "WHITELIST",
+															Pointer: 0,
+															Filter: {}
+														},
+														tank: {
+															FluidName: "thermal:crude_oil",
+															FacingModes: {
+																LEFT: "ENABLED",
+																TOP: "ENABLED",
+																RIGHT: "ENABLED",
+																BACK: "ENABLED",
+																FRONT: "ENABLED",
+																BOTTOM: "ENABLED"
+															},
+															Amount: 2147483647
+														}
+													}
+												}
+											}
+										}
+									]
+								}
+							},
+							{
+								id: "itemfilters:and",
+								Count: 1b,
+								tag: {
+									items: [
+										{
+											id: "industrialforegoing:supreme_black_hole_tank",
+											Count: 1b,
+											tag: {
+												BlockEntityTag: {
+													filter: {
+														Type: "WHITELIST",
+														Pointer: 0,
+														Filter: {}
+													},
+													tank: {
+														FluidName: "pneumaticcraft:oil",
+														FacingModes: {
+															LEFT: "ENABLED",
+															TOP: "ENABLED",
+															RIGHT: "ENABLED",
+															BACK: "ENABLED",
+															FRONT: "ENABLED",
+															BOTTOM: "ENABLED"
+														},
+														Amount: 2147483647
+													}
+												}
+											}
+										},
+										{
+											id: "itemfilters:strong_nbt",
+											Count: 1b,
+											tag: {
+												value: {
+													BlockEntityTag: {
+														filter: {
+															Type: "WHITELIST",
+															Pointer: 0,
+															Filter: {}
+														},
+														tank: {
+															FluidName: "pneumaticcraft:oil",
+															FacingModes: {
+																LEFT: "ENABLED",
+																TOP: "ENABLED",
+																RIGHT: "ENABLED",
+																BACK: "ENABLED",
+																FRONT: "ENABLED",
+																BOTTOM: "ENABLED"
+															},
+															Amount: 2147483647
+														}
+													}
+												}
+											}
+										}
+									]
+								}
+							},
+							{
+								id: "itemfilters:and",
+								Count: 1b,
+								tag: {
+									items: [
+										{
+											id: "industrialforegoing:supreme_black_hole_tank",
+											Count: 1b,
+											tag: {
+												BlockEntityTag: {
+													filter: {
+														Type: "WHITELIST",
+														Pointer: 0,
+														Filter: {}
+													},
+													tank: {
+														FluidName: "immersivepetroleum:oil",
+														FacingModes: {
+															LEFT: "ENABLED",
+															TOP: "ENABLED",
+															RIGHT: "ENABLED",
+															BACK: "ENABLED",
+															FRONT: "ENABLED",
+															BOTTOM: "ENABLED"
+														},
+														Amount: 2147483647
+													}
+												}
+											}
+										},
+										{
+											id: "itemfilters:strong_nbt",
+											Count: 1b,
+											tag: {
+												value: {
+													BlockEntityTag: {
+														filter: {
+															Type: "WHITELIST",
+															Pointer: 0,
+															Filter: {}
+														},
+														tank: {
+															FluidName: "immersivepetroleum:oil",
+															FacingModes: {
+																LEFT: "ENABLED",
+																TOP: "ENABLED",
+																RIGHT: "ENABLED",
+																BACK: "ENABLED",
+																FRONT: "ENABLED",
+																BOTTOM: "ENABLED"
+															},
+															Amount: 2147483647
+														}
+													}
+												}
+											}
+										}
+									]
+								}
+							}
+						]
+					}
+				}
+			}]
+		},
+		{
+			title: "Zoology",
+			x: 3.0d,
+			y: 0.5d,
+			subtitle: "Pets and kisses",
+			description: [
+				"Tame every animal there is to tame!",
+				"",
+				"(You can track the progress you've made by looking at the 'Zoology' advancement in the Husbandry tab)"
+			],
+			dependencies: ["1C6E46EA96373E74"],
+			id: "2AEE1AFA3BC416CE",
+			tasks: [{
+				id: "6550FEDCE5175F8C",
+				type: "advancement",
+				title: "Tame all tameable animals",
+				icon: "farmersdelight:horse_feed",
+				advancement: "enigmatica:husbandry/tame_all_animals",
+				criterion: ""
+			}]
+		},
+		{
+			title: "Two by Two",
+			x: 3.0d,
+			y: -0.5d,
+			subtitle: "The bees and the birds...",
+			description: [
+				"Breed every animal there is to breed!",
+				"",
+				"(You can track the progress you've made by looking at the 'Two by Two' advancement in the Husbandry tab)"
+			],
+			dependencies: ["1C6E46EA96373E74"],
+			id: "24ED473C9C545C09",
+			tasks: [{
+				id: "76A9D7B6C6D4C04F",
+				type: "advancement",
+				title: "Breed all breedable animals",
+				icon: "minecraft:golden_carrot",
+				advancement: "minecraft:husbandry/bred_all_animals",
+				criterion: ""
+			}]
+		}
+	]
 }
